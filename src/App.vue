@@ -1,17 +1,15 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue';
 
-const message = ref('Hi!')
-
-const counter = reactive({
-  count: 0
-})
+const titleClass = ref('title')
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
-  <button @click="counter.count++">Count is: {{ counter.count }}</button>
-  &nbsp;<button @click="counter.count = 0">Reset</button>
+  <h1 :class="titleClass">Make me red</h1>
 </template>
 
-<style scoped></style>
+<style>
+.title {
+  color: red;
+}
+</style>
